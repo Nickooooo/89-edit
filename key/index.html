@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #1b1b1b;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #4b8bff;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #346ae3;
+    }
+    .notify {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #333;
+      padding: 10px 15px;
+      border-radius: 8px;
+      opacity: 0.9;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+    .error { background: #e74c3c; }
+    .success { background: #2ecc71; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login or Register</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="login-btn">Login</button>
+    <button id="register-btn">Create Account</button>
+  </div>
+  <script>
+    function notify(message, type, duration) {
+      const n = document.createElement("div");
+      n.className = "notify " + type;
+      n.textContent = message;
+      document.body.appendChild(n);
+      setTimeout(() => n.remove(), duration || 3000);
+    }
+  </script>
+  <script src="/logic.js"></script>
+</body>
+</html>
