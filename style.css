@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #151516;
+  color: #e0e0e0;
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* copyright ❤️ (hi iqsm) */
+.top-left-bar{display:flex;align-items:center;gap:1vw;position:absolute;top:2vh;left:3vw}.logo,.logo-frame{position:relative}.logo-frame{width:4vw;max-width:65px;aspect-ratio:1;border:.25vh solid #252226;border-radius:1.5vh;display:flex;align-items:center;justify-content:center;background-color:#181b1e;overflow:hidden}.logo-frame::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.4) 0,rgba(255,255,255,.1) 40%,rgba(255,255,255,0) 65%);opacity:0;z-index:0;animation:4.5s ease-in-out infinite logoGlowInner}@keyframes logoGlowInner{0%,100%{opacity:.1;transform:scale(.95)}40%{opacity:.9;transform:scale(1.1)}60%{opacity:.6;transform:scale(1.05)}}.logo{width:70%;height:70%;object-fit:contain;mix-blend-mode:lighten;z-index:1}.logo-text-container{display:flex;flex-direction:column;justify-content:center;line-height:1.2}.logo-text-container .main-text{font-size:1.8rem;font-weight:600}.logo-text-container .sub-text{font-size:.75rem;font-weight:400;color:#aaa}
+::selection{background-color:#29292b;color:#f0f0f0}::-moz-selection{background-color:#29292b;color:#f0f0f0}
+
+/* notification system */
+#global-notify-container{position:fixed;bottom:3vh;right:.2vw;display:flex;flex-direction:column-reverse;gap:1vh;z-index:9999;pointer-events:none;align-items:flex-end}.notify{pointer-events:auto;padding:1.2vh 1.8vw;border-radius:.8vh;border:.1vh solid #2b2b2b;background-color:#191a1e;box-shadow:0 0 1vh rgba(0,0,0,.4);color:#e0e0e0;font-size:.95rem;font-weight:500;min-width:200px;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;display:flex;align-items:center;justify-content:flex-start;gap:.8vw}.notify.show{opacity:1;transform:translateY(0)}.notify::before{content:"";display:block;width:.8vw;max-width:10px;aspect-ratio:1;border-radius:50%}
+/* stuff */
+.notify.success::before { background-color: #00c853; }
+.notify.error::before { background-color: #ff5252; }
+.notify.info::before { background-color: #42a5f5; }
+.notify.warning::before { background-color: #ffb300; }
